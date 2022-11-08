@@ -4,7 +4,7 @@
       <Link
         v-if="$page.props.auth.auth_check"
         :href="route('communities.posts.create', community.slug)"
-        class="px-4 py-2 rounded bg-indigo-500 hover:bg-indigo-600 text-white"
+        class="px-4 py-2 rounded bg-indigo-500 hover:bg-indigo-300 text-white"
       >
         Create Post
       </Link>
