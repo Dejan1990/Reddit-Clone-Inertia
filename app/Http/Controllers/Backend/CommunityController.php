@@ -63,7 +63,7 @@ class CommunityController extends Controller
      */
     public function edit(Community $community)
     {
-        //
+        return Inertia::render('Communities/Edit', [ 'community' => $community ]);
     }
 
     /**
@@ -73,9 +73,11 @@ class CommunityController extends Controller
      * @param  \App\Models\Community  $community
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Community $community)
+    public function update(CommunityStoreRequest $request, Community $community)
     {
-        //
+        $community->update($request->validated());
+
+        return to_route('communities.index');
     }
 
     /**
