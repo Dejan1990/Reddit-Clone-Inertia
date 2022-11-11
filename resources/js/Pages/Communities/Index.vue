@@ -36,7 +36,14 @@
                                             v-for="community in communities.data"
                                             :key="community.id"
                                         >
-                                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{ community.name}}</td>
+                                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
+                                                <Link
+                                                    :href="route('frontend.communities.show', community.slug)"
+                                                    class="text-blue-500 hover:text-blue-700 font-semibold"
+                                                >
+                                                    {{ community.name }}
+                                                </Link>
+                                            </td>
                                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ community.slug}}</td>
                                             <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                                                 <Link
