@@ -40,13 +40,13 @@
                                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ community.slug}}</td>
                                             <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                                                 <Link
-                                                    :href="route('communities.edit', community.id)"
+                                                    :href="route('communities.edit', community.slug)"
                                                     class="text-indigo-600 hover:text-indigo-900"
                                                 >
                                                     Edit
                                                 </Link>
                                                 <Link
-                                                    :href="route('communities.destroy', community.id)"
+                                                    :href="route('communities.destroy', community.slug)"
                                                     class="text-red-600 hover:text-red-900"
                                                     method="delete"
                                                     as="button"
